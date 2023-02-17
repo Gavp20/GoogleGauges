@@ -78,7 +78,7 @@ yAxis.children.unshift(
     rotation: -90,
     text: "Average  SPX  Points",
     y: am5.p50,
-    centerX: am5.p50
+    centerX: am5.p50 
   })
 );
 var series = chart.series.push(am5xy.LineSeries.new(root, {
