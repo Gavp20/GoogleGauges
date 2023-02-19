@@ -1,4 +1,4 @@
-// https://www.amcharts.com/demos/line-with-changing-color
+// https://canvasjs.com/html5-javascript-spline-area-chart/
 
 window.function = function (data, width, height) {
 
