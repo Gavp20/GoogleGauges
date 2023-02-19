@@ -50,8 +50,8 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	data: [{
         // name: "Temp:",
 		type: "splineArea",
-		color: "rgba(54,158,183,.7)",
-        	lineThickness: 2,
+		color: "#6492b7",
+       		lineThickness: 3,
 		markerSize: 8,
 		xValueFormatString: 'Value',
 		yValueFormatString: "#,##0.## oC",
