@@ -9,121 +9,91 @@ window.function = function (data, width, height) {
  
   let ht = `<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Glide Yes-Code</title>
-	
-     <!-- Resources (HTML) -->
-     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-     <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-  </head>
-  <body>
-  <div id="chartdiv"></div>
-  <!-- Styles (CSS) -->
-  <style>
-    #chartdiv {
-      width: ${width}%;
-      height: ${height}px;
-    }
-  </style>
-  
+<head>  
 <script>
-<!-- Chart code (JavaScript)  -->
-// Create root element
-var root = am5.Root.new("chartdiv");
-// Set themes
-root.setThemes([
-  am5themes_Animated.new(root)
-]);
-// Create chart
-var chart = root.container.children.push(am5xy.XYChart.new(root, {
-  panX: true,
-  panY: true,
-  wheelX: "panX",
-  wheelY: "zoomX",
-  layout: root.verticalLayout,
-  pinchZoomX:true
-}));
-// Add cursor
-var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
-  behavior: "none"
-}));
-cursor.lineY.set("visible", false);
-var colorSet = am5.ColorSet.new(root, {});
-//   *** The data ***
-var data = [ ${data} ];
-// Create axes
-var xRenderer = am5xy.AxisRendererX.new(root, {});
-xRenderer.grid.template.set("visible", false);
-xRenderer.labels.template.setAll({
-  location: 0.5,
-  rotation: -90,
-  fontSize: 10,
-  multiLocation: 0.5
-});
-var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
-  categoryField: "time",  //***
-  renderer: xRenderer,
-  paddingRight:15, 
-  tooltip: am5.Tooltip.new(root, {})
-}));
-xAxis.data.setAll(data);
-var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-  maxPrecision: 0,
-  renderer: am5xy.AxisRendererY.new(root, {})
-}));
-yAxis.children.unshift(
-  am5.Label.new(root, {
-    rotation: -90,
-    text: "Average  SPX  Points",
-    y: am5.p50,
-    centerX: am5.p50 
-  })
-);
-var series = chart.series.push(am5xy.LineSeries.new(root, {
-  xAxis: xAxis,
-  yAxis: yAxis,
-  valueYField: "value",
-  categoryXField: "time",     //***
-  tooltip: am5.Tooltip.new(root, {
-    labelText: "{valueY}",
-    dy:-5
-  })
-}));
-series.strokes.template.setAll({
-  templateField: "strokeSettings",
-  strokeWidth: 2
-});
-series.fills.template.setAll({
-  visible: true,
-  fillOpacity: 0.5,
-  templateField: "fillSettings"
-});
-series.bullets.push(function() {
-  return am5.Bullet.new(root, {
-    sprite: am5.Circle.new(root, {
-      templateField: "bulletSettings",
-      radius: 5
-    })
-  });
-});
-series.data.setAll(data);
-series.appear(1000);
-// Add scrollbar
-// https://www.amcharts.com/docs/v5/charts/xy-chart/scrollbars/
-chart.set("scrollbarX", am5.Scrollbar.new(root, {
-  orientation: "horizontal",
-  marginBottom: 20
-}));
-// Make stuff animate on load
-// https://www.amcharts.com/docs/v5/concepts/animations/
-chart.appear(1000, 100);
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,  
+ 	animationDuration: 3000,   
+  	zoomEnabled: true,
+    zoomType: "xy",
+	theme: "light2",
+	title:{
+		// text: "Site Traffic"
+	},
+  	axisX:{
+		valueFormatString: "MMM DD, YYYY",
+		crosshair: {
+			enabled: true,
+			snapToDataPoint: true,
+            		valueFormatString: "hh:mm:ss TT"
+		}
+	},
+  
+	axisY: {
+        // title: "Revenue in USD",
+		valueFormatString: "#0",
+        	gridDashType: "dash",
+		stripLines:[     
+		  {   
+		    	startValue:645,        // limits
+			endValue:740,
+            		opacity: .4
+		  },
+			]
+ 	},
+   
+  	toolTip:{
+	 // shared:true
+	}, 
+	data: [{
+        // name: "Temp:",
+		type: "splineArea",
+		color: "rgba(54,158,183,.7)",
+        	lineThickness: 2,
+		markerSize: 8,
+		xValueFormatString: 'Value',
+		yValueFormatString: "#,##0.## oC",
+      
+		dataPoints: [
+			{ x: new Date("October 12, 2016 16:13:20"), y: 950 },
+			{ x: new Date("October 12, 2016 16:13:43"), y: 700 },
+			{ x: new Date("October 12, 2016 16:14:05"), y: 710 },
+			{ x: new Date("October 12, 2016 16:14:21"), y: 658 },
+			{ x: new Date("October 12, 2016 16:14:46"), y: 734 },
+			{ x: new Date("October 12, 2016 16:15:04"), y: 963 },
+			{ x: new Date("October 12, 2016 16:15:26"), y: 847 },
+            		{ x: new Date("October 12, 2016 16:15:42"), y: 950 },
+			{ x: new Date("October 12, 2016 16:15:57"), y: 700 },
+			{ x: new Date("October 12, 2016 16:16:22"), y: 710 },
+			{ x: new Date("October 12, 2016 16:16:42"), y: 658 },
+			{ x: new Date("October 12, 2016 16:16:57"), y: 734 },
+			{ x: new Date("October 12, 2016 16:17:19"), y: 963 },
+			{ x: new Date("October 12, 2016 16:17:32"), y: 847 },
+ 			{ x: new Date("October 12, 2016 16:17:56"), y: 847 },
+            		{ x: new Date("October 12, 2016 16:18:12"), y: 650 },
+			{ x: new Date("October 12, 2016 16:18:37"), y: 700 },
+			{ x: new Date("October 12, 2016 16:18:52"), y: 710 },
+			{ x: new Date("October 12, 2016 16:19:10"), y: 658 },
+			{ x: new Date("October 12, 2016 16:19:27"), y: 734 },
+			{ x: new Date("October 12, 2016 16:19:49"), y: 963 },
+			{ x: new Date("October 12, 2016 16:20:02"), y: 847 },        
+		]
+	}]
+	});
+chart.render();
+
+}
 </script>
-  </body>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
 </html>`
 
-  let enc = encodeURIComponent(ht);
-  let uri = `data:text/html;charset=utf-8,${enc}`
-  return uri; 
+ let enc = encodeURIComponent(ht);
+ let uri = `data:text/html;charset=utf-8,${enc}`
+ return uri; 
 }   
