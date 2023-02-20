@@ -59,7 +59,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
      
      		//   *** The data sent from Glide ***
 		//   var data = [ ${data} ];
-	 	dataPoints: datas
+	 	dataPoints: ${data}
 	}]
 	});
 chart.render();
