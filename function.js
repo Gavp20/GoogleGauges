@@ -11,7 +11,7 @@ window.function = function (data, width, height, lim_values) {
 <html>
 <head>  
 <script>
-window.onload = function () {
+//window.onload = function () {
 
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,  
@@ -71,7 +71,8 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	});
 chart.render();
 
-}
+//}
+
 </script>
 </head>
 <body>
