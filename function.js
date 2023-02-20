@@ -37,7 +37,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
         	gridDashType: "dash",
 		stripLines:[     
 		  {   
-		    	startValue:645,        // limits
+		    	startValue:645,        // Limits
 			endValue:740,
             		opacity: .4
 		  },
