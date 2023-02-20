@@ -1,11 +1,11 @@
 // https://canvasjs.com/html5-javascript-spline-area-chart/
 
-window.function = function (data, width, height) {
+window.function = function (data, width, height, lim-values) {
 
-  // data
   data = data.value ?? "";
   width = width.value ?? 100;
   height = height.value ?? 500;
+  limits = lim-values ?? "";
  
   let ht = `<!DOCTYPE html>
 <html>
@@ -17,7 +17,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,  
  	animationDuration: 3000,   
   	zoomEnabled: true,
-    zoomType: "xy",
+    	zoomType: "xy",
 	theme: "light2",
 	title:{
 		// text: "Site Traffic"
@@ -47,39 +47,19 @@ var chart = new CanvasJS.Chart("chartContainer", {
   	toolTip:{
 	 // shared:true
 	}, 
+	
 	data: [{
-        // name: "Temp:",
+        	// name: "Temp:",
 		type: "splineArea",
 		color: "#6492b7",
        		lineThickness: 3,
 		markerSize: 8,
 		xValueFormatString: 'Value',
 		yValueFormatString: "#,##0.## oC",
-      
-		dataPoints: [
-			{ x: new Date("October 12, 2016 16:13:20"), y: 950 },
-			{ x: new Date("October 12, 2016 16:13:43"), y: 700 },
-			{ x: new Date("October 12, 2016 16:14:05"), y: 710 },
-			{ x: new Date("October 12, 2016 16:14:21"), y: 658 },
-			{ x: new Date("October 12, 2016 16:14:46"), y: 734 },
-			{ x: new Date("October 12, 2016 16:15:04"), y: 963 },
-			{ x: new Date("October 12, 2016 16:15:26"), y: 847 },
-            		{ x: new Date("October 12, 2016 16:15:42"), y: 950 },
-			{ x: new Date("October 12, 2016 16:15:57"), y: 700 },
-			{ x: new Date("October 12, 2016 16:16:22"), y: 710 },
-			{ x: new Date("October 12, 2016 16:16:42"), y: 658 },
-			{ x: new Date("October 12, 2016 16:16:57"), y: 734 },
-			{ x: new Date("October 12, 2016 16:17:19"), y: 963 },
-			{ x: new Date("October 12, 2016 16:17:32"), y: 847 },
- 			{ x: new Date("October 12, 2016 16:17:56"), y: 847 },
-            		{ x: new Date("October 12, 2016 16:18:12"), y: 650 },
-			{ x: new Date("October 12, 2016 16:18:37"), y: 700 },
-			{ x: new Date("October 12, 2016 16:18:52"), y: 710 },
-			{ x: new Date("October 12, 2016 16:19:10"), y: 658 },
-			{ x: new Date("October 12, 2016 16:19:27"), y: 734 },
-			{ x: new Date("October 12, 2016 16:19:49"), y: 963 },
-			{ x: new Date("October 12, 2016 16:20:02"), y: 847 },        
-		]
+     
+     		//   *** The data ***
+		//   var data = [ ${data} ];
+	 	dataPoints = [ ${data} ];
 	}]
 	});
 chart.render();
