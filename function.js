@@ -10,7 +10,7 @@ let ht = `<!DOCTYPE html>
 </body>
 	
 <script>
-window.onload = function () {
+window.function = function() {
  
   var data= [
 		{ x: new Date("October 12, 2016  16:11:41"), y: 950 },
