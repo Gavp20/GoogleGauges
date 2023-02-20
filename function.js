@@ -2,7 +2,7 @@
 
 window.function = function (data, width, height, lim_values) {
 
-  datas = data.value ?? "";
+  data = data.value ?? "";
   width = width.value ?? 100;
   height = height.value ?? 500;
   limits = lim_values ?? "";
@@ -59,7 +59,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
      
      		//   *** The data sent from Glide ***
 		//   var data = [ ${data} ];
-	 	dataPoints: $data
+	 	dataPoints: [ ${data} ]
 	}]
 	});
 chart.render();
