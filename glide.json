@@ -20,7 +20,7 @@
       "type": "number"
     },
     {
-      "name": "lim-values", 
+      "name": "lim_values", 
       "displayName": "Threshold values (e.g.: 10-40 or 200-250)",
       "type": "string"
     }
