@@ -57,7 +57,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		xValueFormatString: 'Value',
 		yValueFormatString: "#,##0.## oC",
      
-     		//   *** The data ***
+     		//   *** The data sent from Glide ***
 		//   var data = [ ${data} ];
 	 	dataPoints = [ ${data} ];
 	}]
