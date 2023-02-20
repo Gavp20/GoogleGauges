@@ -1,12 +1,12 @@
 {
   "kind": "column",
-  "name": "amCharts chart: Line with Changing Color",
-  "description": "",
-  "author": "Gustavo A. Valero P. - LowCode Agency",
+  "name": "Canvasjs Chart: Spline Area Charts with Zoom",
+  "description": "Code by Gustavo A. Valero P.",
+  "author": "Gustavo A. Valero P.",
   "params": [
     {
       "name": "data",
-      "displayName": "Timeline data",
+      "displayName": "Timeline Data",
       "type": "string"
     },
     {
@@ -18,6 +18,11 @@
       "name": "height",
       "displayName": "Height (default: 500px)",
       "type": "number"
+    },
+    {
+      "name": "lim-Values", 
+      "displayName": "Threshold values (e.g.: 10-40 or 200-250)",
+      "type": "string"
     }
   ],
   "result": {
