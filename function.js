@@ -1,11 +1,11 @@
 // https://canvasjs.com/html5-javascript-spline-area-chart/
 
-window.function = function (data, width, height, lim-values) {
+window.function = function (data, width, height, lim_values) {
 
   data = data.value ?? "";
   width = width.value ?? 100;
   height = height.value ?? 500;
-  limits = lim-values ?? "";
+  limits = lim_values ?? "";
  
   let ht = `<!DOCTYPE html>
 <html>
