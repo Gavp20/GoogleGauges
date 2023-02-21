@@ -6,23 +6,23 @@
   "params": [
     {
       "name": "data",
-      "displayName": "Timeline Data",
+      "displayName": "Timeline data",
       "type": "string"
-    },
-    {
-      "name": "width",
-      "displayName": "Width (default: 100%)",
-      "type": "number"
-    },
-    {
-      "name": "height",
-      "displayName": "Height (default: 500px)",
-      "type": "number"
     },
     {
       "name": "limits", 
       "displayName": "Threshold values (e.g.: 10-40 or 200-250)",
       "type": "string"
+    },    
+    {
+      "name": "unit",
+      "displayName": "Unit (oC, secs, PSI, etc)",
+      "type": "string"
+    },
+    {
+      "name": "height",
+      "displayName": "Chart height (default: 300px)",
+      "type": "number"
     }
   ],
   "result": {
