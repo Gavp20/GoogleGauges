@@ -1,11 +1,11 @@
 // https://canvasjs.com/html5-javascript-spline-area-chart/
-window.function = function (data, width, height, limits) {
+window.function = function (data, limits, unit, height) {
 
 // data
 data = data.value ?? "";
-width = width.value ?? 100;
-height = height.value ?? 500;
-limits = limits.value ?? "0-0";	
+limits = limits.value ?? "0-0";		
+unit = unit.value ?? "";
+height = height.value ?? 300;
 	
 // Retrieve the Threshold values for Chart
 let limBottom = +limits.split("-")[0];	// The plus operator (+) converts a string into a number directly. 
@@ -75,7 +75,7 @@ let ht = `<!DOCTYPE html>
         	lineThickness: 3,
 		markerSize: 8,
 		xValueFormatString: 'Value',
-		yValueFormatString: "#,##0.## oC",
+		yValueFormatString: "#,##0.## ${unit}",
   
 		dataPoints: [ ${data} ]  
 	}]
