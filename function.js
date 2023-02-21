@@ -20,20 +20,7 @@ let ht = `<!DOCTYPE html>
 </body>
 	
 <script>
-/*	var data= [
-		{ x: new Date("October 12, 2016 16:11:41"), y: 950 },
-		{ x: new Date("October 12, 2016 16:23:43"), y: 700 },
-		{ x: new Date("October 12, 2016 16:34:05"), y: 710 },
-		{ x: new Date("October 12, 2016 16:44:21"), y: 658 },
-		{ x: new Date("October 12, 2016 16:54:46"), y: 734 },
-		{ x: new Date("October 12, 2016 17:05:04"), y: 423 },
-		{ x: new Date("October 12, 2016 17:15:26"), y: 847 },
-          	{ x: new Date("October 12, 2016 17:25:42"), y: 950 },
-		{ x: new Date("October 12, 2016 17:35:57"), y: 700 },
-		{ x: new Date("October 12, 2016 17:46:22"), y: 750 } 
-		];
- */ 
-	var chart = new CanvasJS.Chart("chartContainer", {
+ 	var chart = new CanvasJS.Chart("chartContainer", {
 		animationEnabled: true,  
  		animationDuration: 3000,   
   		zoomEnabled: true,
@@ -72,7 +59,7 @@ let ht = `<!DOCTYPE html>
        		 // name: "Temp:",
 		type: "splineArea",
 		color: "#6492b7",
-        	lineThickness: 3,
+        	lineThickness: 2,
 		markerSize: 8,
 		xValueFormatString: 'Value',
 		yValueFormatString: "#,##0.## ${unit}",
