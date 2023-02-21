@@ -1,23 +1,21 @@
 // https://canvasjs.com/html5-javascript-spline-area-chart/
 window.function = function (data, width, height) {
 
-  // data
-  data = data.value ?? "";
-  width = width.value ?? 100;
-  height = height.value ?? 500;
+// data
+data = data.value ?? "";
+width = width.value ?? 100;
+height = height.value ?? 500;
 	
-  let ht = `<!DOCTYPE html>
+let ht = `<!DOCTYPE html>
 <html>
 <head>  
-	
 <body>
-<div id="chartContainer" style="height: 300px; width: 100%;"></div>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+     <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
 	
 <script>
- 
-  var data= [
+	var data= [
 		{ x: new Date("October 12, 2016  16:11:41"), y: 950 },
 		{ x: new Date("October 12, 2016 16:23:43"), y: 700 },
 		{ x: new Date("October 12, 2016 16:34:05"), y: 710 },
@@ -30,21 +28,22 @@ window.function = function (data, width, height) {
 		{ x: new Date("October 12, 2016 17:46:22"), y: 750 } 
 		];
   
-var chart = new CanvasJS.Chart("chartContainer", {
-	animationEnabled: true,  
- 	animationDuration: 3000,   
-  	zoomEnabled: true,
-    zoomType: "xy",
-	theme: "light2",
-	title:{
-	    // text: "Temp/Pressure Values"
+	var chart = new CanvasJS.Chart("chartContainer", {
+		animationEnabled: true,  
+ 		animationDuration: 3000,   
+  		zoomEnabled: true,
+		zoomType: "xy",
+		theme: "light2",
+		title:{
+	   	 // text: "Temp/Pressure Values"
 	},
   	axisX:{
+		reversed: true,
 		valueFormatString: "MMM DD, YYYY",
 		crosshair: {
 			enabled: true,
 			snapToDataPoint: true,
-            valueFormatString: "hh:mm:ss TT"
+            		valueFormatString: "hh:mm:ss TT"
 		}
 	},
   
@@ -54,7 +53,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
        		gridDashType: "dash",
 		stripLines:[     
 		  {   
-		   	startValue:645,        // limits
+		 	startValue:645,        // limits
 			endValue:740,
             		opacity: .4
 		  },
@@ -77,7 +76,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
       
 	}]
 	});
-chart.render();
+	chart.render();
 
 </script>
 </head>
