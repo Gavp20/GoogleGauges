@@ -1,6 +1,12 @@
 // https://canvasjs.com/html5-javascript-spline-area-chart/
+window.function = function (data, width, height) {
 
-let ht = `<!DOCTYPE html>
+  // data
+  data = data.value ?? "";
+  width = width.value ?? 100;
+  height = height.value ?? 500;
+	
+  let ht = `<!DOCTYPE html>
 <html>
 <head>  
 	
@@ -10,7 +16,6 @@ let ht = `<!DOCTYPE html>
 </body>
 	
 <script>
-window.function = function() {
  
   var data= [
 		{ x: new Date("October 12, 2016  16:11:41"), y: 950 },
@@ -60,7 +65,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	 // shared:true
 	}, 
 	data: [{
-        // name: "Temp:",
+       		 // name: "Temp:",
 		type: "splineArea",
 		color: "#6492b7",
         	lineThickness: 3,
@@ -74,7 +79,6 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	});
 chart.render();
 
-}
 </script>
 </head>
 </html>`
@@ -82,4 +86,4 @@ chart.render();
 let enc = encodeURIComponent(ht);
 let uri = `data:text/html;charset=utf-8,${enc}`
 return uri; 
-
+}
