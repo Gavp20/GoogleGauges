@@ -6,10 +6,7 @@ data = data.value ?? "";
 width = width.value ?? 100;
 height = height.value ?? 500;
 limits = limits.value ?? "0-0";	
-	
-limBottom = +limits.split("-")[0];	// The plus operator (+) converts a string into a number directly. 
-limTop = +limits.split("-")[1];
-	
+		
 let ht = `<!DOCTYPE html>
 <html>
 <head>  
@@ -19,6 +16,10 @@ let ht = `<!DOCTYPE html>
 </body>
 	
 <script>
+// Retrieve the Threshold values for Chart
+limBottom = +limits.split("-")[0];	// The plus operator (+) converts a string into a number directly. 
+limTop = +limits.split("-")[1];
+
 /*	var data= [
 		{ x: new Date("October 12, 2016 16:11:41"), y: 950 },
 		{ x: new Date("October 12, 2016 16:23:43"), y: 700 },
@@ -57,8 +58,8 @@ let ht = `<!DOCTYPE html>
        		gridDashType: "dash",
 		stripLines:[     
 		  {   
-		    	startValue: limBottom,        // limits -> Threshold values
-	 		endValue: limTop,
+		    	startValue: ${limBottom},        // limits -> Threshold values
+	 		endValue: ${limTop},
             		opacity: .4
 		  },
 			]
