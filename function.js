@@ -15,7 +15,7 @@ let ht = `<!DOCTYPE html>
 </body>
 	
 <script>
-	var data= [
+/*	var data= [
 		{ x: new Date("October 12, 2016 16:11:41"), y: 950 },
 		{ x: new Date("October 12, 2016 16:23:43"), y: 700 },
 		{ x: new Date("October 12, 2016 16:34:05"), y: 710 },
@@ -27,7 +27,7 @@ let ht = `<!DOCTYPE html>
 		{ x: new Date("October 12, 2016 17:35:57"), y: 700 },
 		{ x: new Date("October 12, 2016 17:46:22"), y: 750 } 
 		];
-  
+ */ 
 	var chart = new CanvasJS.Chart("chartContainer", {
 		animationEnabled: true,  
  		animationDuration: 3000,   
@@ -72,7 +72,7 @@ let ht = `<!DOCTYPE html>
 		xValueFormatString: 'Value',
 		yValueFormatString: "#,##0.## oC",
   
-		dataPoints: data   
+		dataPoints: [ ${data} ]  
 	}]
 	});
 	chart.render();
