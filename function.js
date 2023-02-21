@@ -16,7 +16,7 @@ let ht = `<!DOCTYPE html>
 	
 <script>
 	var data= [
-		{ x: new Date("October 12, 2016  16:11:41"), y: 950 },
+		{ x: new Date("October 12, 2016 16:11:41"), y: 950 },
 		{ x: new Date("October 12, 2016 16:23:43"), y: 700 },
 		{ x: new Date("October 12, 2016 16:34:05"), y: 710 },
 		{ x: new Date("October 12, 2016 16:44:21"), y: 658 },
@@ -61,7 +61,7 @@ let ht = `<!DOCTYPE html>
  	},
    
   	toolTip:{
-	 // shared:true
+		 // shared:true
 	}, 
 	data: [{
        		 // name: "Temp:",
@@ -72,8 +72,7 @@ let ht = `<!DOCTYPE html>
 		xValueFormatString: 'Value',
 		yValueFormatString: "#,##0.## oC",
   
-		dataPoints: data
-      
+		dataPoints: data   
 	}]
 	});
 	chart.render();
@@ -83,6 +82,6 @@ let ht = `<!DOCTYPE html>
 </html>`
 
 let enc = encodeURIComponent(ht);
-let uri = `data:text/html;charset=utf-8,${enc}`
+let uri = `data:text/html;charset=utf-8,${enc}` ;
 return uri; 
 }
