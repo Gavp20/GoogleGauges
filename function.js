@@ -1,10 +1,14 @@
 // https://canvasjs.com/html5-javascript-spline-area-chart/
-window.function = function (data, width, height) {
+window.function = function (data, width, height, limits) {
 
 // data
 data = data.value ?? "";
 width = width.value ?? 100;
 height = height.value ?? 500;
+limits = limits.value ?? "0-0";	
+	
+limBottom = +limits.split("-")[0];	// The plus operator (+) converts a string into a number directly. 
+limTop = +limits.split("-")[1];
 	
 let ht = `<!DOCTYPE html>
 <html>
@@ -53,8 +57,8 @@ let ht = `<!DOCTYPE html>
        		gridDashType: "dash",
 		stripLines:[     
 		  {   
-		 	startValue:645,        // limits
-			endValue:740,
+		    	startValue: limBottom,        // limits -> Threshold values
+	 		endValue: limTop,
             		opacity: .4
 		  },
 			]
