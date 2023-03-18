@@ -3,16 +3,16 @@ window.function = function (labelList, label1Val, label2Val, label3Val) {
 
 // data
  
-labelList = labelList.value ?? "";
-label1Val = label1Val.value ?? 0;		
-label2Val = label2Val.value ?? 0;		
-label3Val = label3Val.value ?? 0;		
+labelLista = labelList.value ?? "";
+labelVal1 = label1Val.value ?? 0;		
+labelVal2 = label2Val.value ?? 0;		
+labelVal3 = label3Val.value ?? 0;		
  	
 // Retrieve the Threshold values for Chart
-let labelList = labelList.split(",");	
-let label1Val =	+label1Val.split("|")[0];    // The plus operator (+) converts a string into a number directly.
-let label2Val =	+label2Val.split("|")[0];	
-let label3Val =	+label3Val.split("|")[0];
+let labelLista = labelList.split(",");	
+let labelVal1 =	+label1Val.split("|")[0];    // The plus operator (+) converts a string into a number directly.
+let labelVal2 =	+label2Val.split("|")[0];	
+let labelVal3 =	+label3Val.split("|")[0];
 	
 let ht = `<!DOCTYPE html>
 <html>
@@ -26,9 +26,9 @@ let ht = `<!DOCTYPE html>
 
         var data = google.visualization.arrayToDataTable([
           ['Label', 'Value'],
-          ['${labelList[0]}', ${label1Val}*0.7],
-          ['${labelList[1]}', ${label2Val}*0.7],
-          ['${labelList[2]}', ${label3Val}*0.7]
+          ['${labelLista[0]}', ${labelVal1}*0.7],
+          ['${labelLista[1]}', ${labelVal2}*0.7],
+          ['${labelLista[2]}', ${labelVal3}*0.7]
         ]);
 
         var options = {
@@ -44,11 +44,11 @@ let ht = `<!DOCTYPE html>
         var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
         chart.draw(data, options);
 	
-        data.setValue(0, 1, ${label1Val});
+        data.setValue(0, 1, ${labelVal1});
         chart.draw(data, options);
-        data.setValue(1, 1, ${label2Val});
+        data.setValue(1, 1, ${labelVal2});
         chart.draw(data, options);
-        data.setValue(2, 1, ${label3Val});
+        data.setValue(2, 1, ${labelVal3});
         chart.draw(data, options);
       }
     </script>
