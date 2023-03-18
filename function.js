@@ -9,12 +9,11 @@ label2Val = label2Val.value ?? 0;
 label3Val = label3Val.value ?? 0;		
  	
 // Retrieve the Threshold values for Chart
-let labelList = labelList.split("-");	 
-let label1Val =	+label1Val.split("-")[0];
-let label1Val =	+label1Val.split("-")[0];	
-	
-//   let limBottom = +limits.split("-")[0];	// The plus operator (+) converts a string into a number directly. 
-//  let limTop = +limits.split("-")[1];	
+let labelList = labelList.split("-");	
+let label1Val =	+label1Val.split("-")[0];    // The plus operator (+) converts a string into a number directly.
+let label2Val =	+label2Val.split("-")[0];	
+let label3Val =	+label3Val.split("-")[0];
+ 
 	
 let ht = `<!DOCTYPE html>
 <html>
@@ -28,9 +27,9 @@ let ht = `<!DOCTYPE html>
 
         var data = google.visualization.arrayToDataTable([
           ['Label', 'Value'],
-          ['Memory', {Val1}*0.7],
-          ['CPU', {Val2}*0.7],
-          ['Network', {Val3}*0.7]
+          ['Memory', label1Val*0.7],
+          ['CPU', label2Val*0.7],
+          ['Network', label1Val*0.7]
         ]);
 
         var options = {
