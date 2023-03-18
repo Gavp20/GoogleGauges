@@ -1,27 +1,27 @@
 {
   "kind": "column",
-  "name": "Canvasjs Spline Area Charts with Zoom #5",
+  "name": "Google Gauge (up to 3 values)",
   "description": "by Gavp",
   "author": "Gustavo A. Valero P.",
   "params": [
     {
-      "name": "data",
-      "displayName": "Timeline data",
+      "name": "labelList",
+      "displayName": "List of Labels (e.g. Temp, Level, Pressure) ",
       "type": "string"
     },
     {
-      "name": "limits", 
-      "displayName": "Threshold values (e.g.: 10-40 or 200-250)",
-      "type": "string"
+      "name": "label1Val", 
+      "displayName": "Gauge #1 Value",
+      "type": "number"
     },    
     {
-      "name": "unit",
-      "displayName": "Unit (oC, secs, PSI, etc)",
-      "type": "string"
+      "name": "label2Val",
+      "displayName": "Gauge #2 Value",
+      "type": "number"
     },
     {
-      "name": "height",
-      "displayName": "Chart height (default: 300px)",
+      "name": "label3Val",
+      "displayName": "Gauge #3 Value",
       "type": "number"
     }
   ],
