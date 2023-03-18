@@ -13,64 +13,53 @@ let limTop = +limits.split("-")[1];
 	
 let ht = `<!DOCTYPE html>
 <html>
-<head>  
-<body>
-     <div id="chartContainer" style="height: ${height}px; width: 100%;"></div>
-     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-</body>
-	
-<script>
- 	var chart = new CanvasJS.Chart("chartContainer", {
-		animationEnabled: true,  
- 		animationDuration: 3000,   
-  		zoomEnabled: true,
-		zoomType: "xy",
-		theme: "light2",
-		title:{
-	   	 // text: "Temp/Pressure Values"
-	},
-  	axisX:{
-		reversed: true,
-		valueFormatString: "MMM DD, YYYY",
-		crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-            		valueFormatString: "hh:mm:ss TT"
-		}
-	},
-  
-	axisY: {
-        // title: "Revenue in USD",
-		valueFormatString: "#0",
-       		gridDashType: "dash",
-		stripLines:[     
-		  {   
-		    	startValue: ${limBottom},        // limits -> Threshold values
-	 		endValue: ${limTop},
-            		opacity: .4
-		  },
-			]
- 	},
-   
-  	toolTip:{
-		 // shared:true
-	}, 
-	data: [{
-       		 // name: "Temp:",
-		type: "splineArea",
-		color: "#6492b7",
-        	lineThickness: 2,
-		markerSize: 8,
-		xValueFormatString: 'Value',
-		yValueFormatString: "#,##0.## ${unit}",
-  
-		dataPoints: [ ${data} ]  
-	}]
-	});
-	chart.render();
+  <head>
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <script type="text/javascript">
+      google.charts.load('current', {'packages':['gauge']});
+      google.charts.setOnLoadCallback(drawChart);
 
-</script>
-</head>
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Memory', {Val1}*0.7],
+          ['CPU', {Val2}*0.7],
+          ['Network', {Val3}*0.7]
+        ]);
+
+        var options = {
+          width: 180, height: 350,
+          redFrom: 90, redTo: 100,
+          yellowFrom:75, yellowTo: 90,
+          minorTicks: 5,
+          animation:{
+             duration: 4000,
+       	     easing: 'out'},      
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+
+ 
+          data.setValue(0, 1,{Val1});
+          chart.draw(data, options);
+ 
+ 
+          data.setValue(1, 1, {Val2}*0.7);
+          chart.draw(data, options);
+ 
+ 
+          data.setValue(2, 1, 60 + {Val3}*0.7);
+          chart.draw(data, options);
+ 
+      }
+    </script>
+  </head>
+  <body>
+     <div id="chart_div" align='center' style="width: 300px; height: 400px; padding: 30px 00; background-color:blackX;"></div>
+  </body>
 </html>`
 
 let enc = encodeURIComponent(ht);
