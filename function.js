@@ -8,11 +8,13 @@ label1Val = label1Val.value ?? "0|";
 label2Val = label2Val.value ?? "0|";		
 label3Val = label3Val.value ?? "0|";
 		
-// Retrieve the Threshold values for Chart
+	+limits.split("-")[0];
+	
+// Retrieve values for Chart
 let labelLista = labelList.split(",");	
-let labelVal1 =	+label1Val.split("|")[0];    // The plus operator (+) converts a string into a number directly.
-let labelVal2 =	+label2Val.split("|")[0];	
-let labelVal3 =	+label3Val.split("|")[0];
+let labelVal1 =	label1Val.split("|")[0];    // The plus operator (+) converts a string into a number directly.
+let labelVal2 =	label2Val.split("|")[0];	
+let labelVal3 =	label3Val.split("|")[0];
 	
 let ht = `<!DOCTYPE html>
 <html>
