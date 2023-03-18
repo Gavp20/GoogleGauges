@@ -12,17 +12,17 @@
     {
       "name": "label1Val", 
       "displayName": "Gauge #1 Value (|)",
-      "type": "number"
+      "type": "string"
     },    
     {
       "name": "label2Val",
       "displayName": "Gauge #2 Value (|)",
-      "type": "number"
+      "type": "string"
     },
     {
       "name": "label3Val",
       "displayName": "Gauge #3 Value (|)",
-      "type": "number"
+      "type": "string"
     }
   ],
   "result": {
