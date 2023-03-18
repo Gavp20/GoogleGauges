@@ -2,12 +2,12 @@
 window.function = function (labelList, label1Val, label2Val, label3Val) {
 
 // data
- 
-labelLista = labelList.value ?? ",,";
+	
 labelVal1 = label1Val.value ?? "0|";		
 labelVal2 = label2Val.value ?? "0|";		
-labelVal3 = label3Val.value ?? "0|";		
- 	
+labelVal3 = label3Val.value ?? "0|";
+labelLista = labelList.value ?? ",,";
+			
 // Retrieve the Threshold values for Chart
 let labelLista = labelList.split(",");	
 let labelVal1 =	+label1Val.split("|")[0];    // The plus operator (+) converts a string into a number directly.
