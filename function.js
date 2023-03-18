@@ -1,15 +1,20 @@
 // https://canvasjs.com/html5-javascript-spline-area-chart/
-window.function = function (data, limits, unit, height) {
+window.function = function (labelList, label1Val, label2Val, label3Val) {
 
 // data
-data = data.value ?? "";
-limits = limits.value ?? "0-0";		
-unit = unit.value ?? "";
-height = height.value ?? 300;
-	
+ 
+labelList = labelList.value ?? "";
+label1Val = label1Val.value ?? 0;		
+label2Val = label2Val.value ?? 0;		
+label3Val = label3Val.value ?? 0;		
+ 	
 // Retrieve the Threshold values for Chart
-let limBottom = +limits.split("-")[0];	// The plus operator (+) converts a string into a number directly. 
-let limTop = +limits.split("-")[1];	
+let labelList = labelList.split("-");	 
+let label1Val =	+label1Val.split("-")[0];
+let label1Val =	+label1Val.split("-")[0];	
+	
+//   let limBottom = +limits.split("-")[0];	// The plus operator (+) converts a string into a number directly. 
+//  let limTop = +limits.split("-")[1];	
 	
 let ht = `<!DOCTYPE html>
 <html>
