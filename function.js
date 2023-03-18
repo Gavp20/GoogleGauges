@@ -8,8 +8,6 @@ label1Val = label1Val.value ?? "0|";
 label2Val = label2Val.value ?? "0|";		
 label3Val = label3Val.value ?? "0|";
 		
-	+limits.split("-")[0];
-	
 // Retrieve values for Chart
 let labelLista = labelList.split(",");	
 let labelVal1 =	label1Val.split("|")[0];    // The plus operator (+) converts a string into a number directly.
