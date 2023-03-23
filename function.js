@@ -26,9 +26,9 @@ let ht = `<!DOCTYPE html>
 
         var data = google.visualization.arrayToDataTable([
           ['Label', 'Value'],
-          ['${labelLista[0]}', ${labelVal1}*0.7],
-          ['${labelLista[1]}', ${labelVal2}*0.7],
-          ['${labelLista[2]}', ${labelVal3}*0.7]
+          ['${labelVal1[0]}', ${labelVal1[2]}],
+          ['${labelVal2[0]}', ${labelVal2[2]}],
+          ['${labelVal3[0]}', ${labelVal3[2]}]
         ]);
 
         var options = {
@@ -44,11 +44,11 @@ let ht = `<!DOCTYPE html>
         var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
         chart.draw(data, options);
 	
-        data.setValue(0, 1, ${labelVal1});
+        data.setValue(0, 1, ${labelVal1[1]});
         chart.draw(data, options);
-        data.setValue(1, 1, ${labelVal2});
+        data.setValue(1, 1, ${labelVal2[1]});
         chart.draw(data, options);
-        data.setValue(2, 1, ${labelVal3});
+        data.setValue(2, 1, ${labelVal3[1]});
         chart.draw(data, options);
       }
     </script>
