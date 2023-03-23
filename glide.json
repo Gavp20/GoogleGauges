@@ -6,7 +6,7 @@
   "params": [
     {
       "name": "labelList",
-      "displayName": "List of Labels (e.g. Temp, Level, Pressure) ",
+      "displayName": "List of Labels ***",
       "type": "string"
     },
     {
