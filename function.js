@@ -10,9 +10,9 @@ label3Val = label3Val.value ?? "0|";
 		
 // Retrieve values for Chart
 let labelLista = labelList.split(",");	
-let labelVal1 =	label1Val.split("|")[0];    // The plus operator (+) converts a string into a number directly.
-let labelVal2 =	label2Val.split("|")[0];	
-let labelVal3 =	label3Val.split("|")[0];
+let labelVal1 =	label1Val.split("|");    // The plus operator (+) converts a string into a number directly.
+let labelVal2 =	label2Val.split("|");	
+let labelVal3 =	label3Val.split("|");
 	
 let ht = `<!DOCTYPE html>
 <html>
