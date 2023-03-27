@@ -32,7 +32,7 @@ let ht = `<!DOCTYPE html>
         ]);
 
         var options = {
-          width: 180, height: 350,
+          width: 180, height: 370,
           redFrom: 90, redTo: 100,
           yellowFrom:75, yellowTo: 90,
           minorTicks: 5,
@@ -54,7 +54,7 @@ let ht = `<!DOCTYPE html>
     </script>
   </head>
   <body>
-     <div id="chart_div" align='center' style="width: 300px; height: 400px; padding: 30px 00;"></div>
+     <div id="chart_div" align='center' style="width: 300px; height: 400px; padding: 10px 00;"></div>
   </body>
 </html>`
 
