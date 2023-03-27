@@ -54,7 +54,7 @@ let ht = `<!DOCTYPE html>
     </script>
   </head>
   <body>
-     <div id="chart_div" align='center' style="width: 300px; height: 400px; padding: 10px 00;"></div>
+     <div id="chart_div" align='center' style="width: 300px; height: 400px; padding: 02px 00;"></div>
   </body>
 </html>`
 
