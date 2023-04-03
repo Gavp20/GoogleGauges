@@ -32,9 +32,9 @@ let ht = `<!DOCTYPE html>
         ]);
 
         var options = {
-          width: 180, height: 370,
-          redFrom: 90, redTo: 100,
-          yellowFrom:75, yellowTo: 90,
+          width: 180, height: 380,
+          yellowFrom:70, yellowTo: 100,	  
+          redFrom: 120, redTo: 150,
           minorTicks: 5,
           animation:{
              duration: 4000,
