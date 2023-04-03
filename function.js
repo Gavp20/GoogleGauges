@@ -26,9 +26,9 @@ let ht = `<!DOCTYPE html>
 
         var data = google.visualization.arrayToDataTable([
           ['Label', 'Value'],
-          ['${labelVal1[0]}', ${labelVal1[2]}],
-          ['${labelVal2[0]}', ${labelVal2[2]}],
-          ['${labelVal3[0]}', ${labelVal3[2]}]
+          ['${labelVal1[0]}', ${labelVal1[2]}/2],
+          ['${labelVal2[0]}', ${labelVal2[2]}/2],
+          ['${labelVal3[0]}', ${labelVal3[2]}/2]
         ]);
 
         var options = {
