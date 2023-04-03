@@ -33,9 +33,9 @@ let ht = `<!DOCTYPE html>
 
         var options = {
           width: 180, height: 380,
-          greenFrom:105, greenTo: 120,	  
-          redFrom: 120, redTo: 140,
-          minorTicks: 5,
+	  yellowFrom: 60, yellowTo: 105,          
+          redFrom: 121, redTo: 150,
+          minorTicks: 5, max: 150,
           animation:{
              duration: 4000,
        	     easing: 'out'},      
