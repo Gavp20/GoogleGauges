@@ -6,7 +6,7 @@
   "params": [
     {
       "name": "labelList",
-      "displayName": "List of Labels ***",
+      "displayName": "List of Labels..",
       "type": "string"
     },
     {
